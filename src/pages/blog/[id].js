@@ -9,11 +9,16 @@ const id = ({query}) => {
     router.push('/');
   }
 
+  const clickHandlerBack = () => {
+    router.back();
+  }
+
   return (
     <div>
       <h1>動的です</h1>
       <h2>{ router.query.id }</h2>
       <button onClick={clickHandler}>トップへ画面遷移</button>
+      <button onClick={clickHandlerBack}>戻る</button>
     </div>
   )
 }
