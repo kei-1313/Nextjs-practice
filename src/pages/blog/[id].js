@@ -4,10 +4,16 @@ import { useRouter } from 'next/router';
 const id = ({query}) => {
   const router = useRouter();
   console.log(router);
+
+  const clickHandler = () => {
+    router.push('/');
+  }
+
   return (
     <div>
       <h1>動的です</h1>
       <h2>{ router.query.id }</h2>
+      <button onClick={clickHandler}>トップへ画面遷移</button>
     </div>
   )
 }
