@@ -1,6 +1,7 @@
 import React from 'react'
 import { useRouter } from 'next/router';
 
+
 const id = ({query}) => {
   const router = useRouter();
   console.log(router);
@@ -19,6 +20,8 @@ const id = ({query}) => {
       <h2>{ router.query.id }</h2>
       <button onClick={clickHandler}>トップへ画面遷移</button>
       <button onClick={clickHandlerBack}>戻る</button>
+
+      
     </div>
   )
 }
