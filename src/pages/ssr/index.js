@@ -1,9 +1,9 @@
 import { useState, useEffect } from "react";
 
 
-function ssr({message}) {
+function Ssr() {
   // console.log("hello");
-  console.log(message);
+  // console.log(message);
   const [state, setState] = useState('kei')
   const val = 0
 
@@ -15,19 +15,19 @@ function ssr({message}) {
       <h1>SSR</h1>
       <h3>{val}</h3>
       <h4>{state}</h4>
-      <h5>{message}</h5>
+      {/* <h5>{message}</h5> */}
     </div>
   )
 }
 
-export default ssr
+export default Ssr
 
-export async function getServerSideProps(context) {
-  const {cookie} = context.req.headers
-  return{
-    // redirect: {
-    //   destination: '/blog'
-    // },
-    props: {message: 'From Server Silde Props'}
-  }
-}
+// export async function getServerSideProps(context) {
+//   const {cookie} = context.req.headers
+//   return{
+//     // redirect: {
+//     //   destination: '/blog'
+//     // },
+//     props: {message: 'From Server Silde Props'}
+//   }
+// }

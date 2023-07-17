@@ -3,7 +3,7 @@ import Head from "next/head";
 import Script from "next/script";
 import { useState } from "react";
 
-const multiplePage = () => {
+const MultiplePage = () => {
   const router = useRouter();
   const step = router.query.step ?? 0
 
@@ -43,4 +43,4 @@ const multiplePage = () => {
   )
 }
 
-export default multiplePage
+export default MultiplePage

@@ -6,7 +6,7 @@ import { useRouter } from "next/router";
 import Link from "next/link";
 
 
-const formPage = () => {
+const FormPage = () => {
   const initialState = { name: "", birth: "" };
   const [value, setValue] = useState(initialState);
   const [ list, setList ] = useAppContext();
@@ -47,4 +47,4 @@ const formPage = () => {
   )
 }
 
-export default formPage
+export default FormPage

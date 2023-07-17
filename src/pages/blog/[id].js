@@ -1,8 +1,7 @@
-import React from 'react'
 import { useRouter } from 'next/router';
 
 
-const id = ({query}) => {
+const Id = () => {
   const router = useRouter();
   console.log(router);
 
@@ -17,7 +16,7 @@ const id = ({query}) => {
   return (
     <div>
       <h1>動的です</h1>
-      <h2>{ router.query.id }</h2>
+      {/* <h2>{ router.query.id }</h2> */}
       <button onClick={clickHandler}>トップへ画面遷移</button>
       <button onClick={clickHandlerBack}>戻る</button>
 
@@ -26,11 +25,11 @@ const id = ({query}) => {
   )
 }
 
-export async function getServerSideProps({ query }) {
-  console.log(query);
-  return {
-    props: { query }
-  }
-}
+// export async function getServerSideProps({ query }) {
+//   console.log(query);
+//   return {
+//     props: { query }
+//   }
+// }
 
-export default id
+export default Id

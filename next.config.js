@@ -1,6 +1,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
+  trailingSlash: true,
   async rewrites() {
     return [
       {
@@ -12,6 +13,9 @@ const nextConfig = {
         destination: '/multiple'
       }
     ]
+  },
+  images: {
+    loader: 'custom'
   }
 }
 
