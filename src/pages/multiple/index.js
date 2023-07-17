@@ -1,4 +1,7 @@
 import { useRouter } from "next/router";
+import Head from "next/head";
+import Script from "next/script";
+import { useState } from "react";
 
 const multiplePage = () => {
   const router = useRouter();
@@ -7,8 +10,13 @@ const multiplePage = () => {
   const goToStep = (_step, asPath) => {
     router.push(`/multiple?step=${_step}`, asPath)
   }
+
+  const [loaded, setLoaded] = useState(false);
   return (
     <div>
+      <Head>
+        <title>multipleページ</title>
+      </Head>
       { step == 0 && (
         <>
           <h3>Step {step}</h3>
@@ -27,7 +35,11 @@ const multiplePage = () => {
           <buttton onClick={() => goToStep(0, "/multiple")}>Next Step</buttton>
         </>
       )}
+      {/* <Script src="/script.js" onLoad={() => {setLoaded(true)}} onError={e => console.error(e)}>
+        
+      </Script> */}
     </div>
+
   )
 }
 
