@@ -9,6 +9,9 @@ function Blog() {
       <Link href="/">
         トップへ
       </Link>
+      <Link href="/ssr">
+        ssrぺーじへ
+      </Link>
     </div>
   )
 }
