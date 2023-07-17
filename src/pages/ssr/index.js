@@ -1,8 +1,9 @@
 import { useState } from "react";
 
 
-function ssr() {
-  console.log("hello");
+function ssr({message}) {
+  // console.log("hello");
+  console.log(message);
   const [state, setState] = useState('kei')
   const val = 0
   return (
@@ -15,3 +16,12 @@ function ssr() {
 }
 
 export default ssr
+
+export async function getServerSideProps(context) {
+  return{
+    redirect: {
+      destination: '/blog'
+    },
+    props: {message: 'From Server Silde Props'}
+  }
+}
